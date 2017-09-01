@@ -25,11 +25,11 @@ object TimeUtils {
     fun stringToDate(dateStr: String, format: String = FORMAT_YMDHMS): Date? {
 
         val formater: SimpleDateFormat = SimpleDateFormat(format, Locale.US)
-        try {
+        return try {
             formater.isLenient = false
-            return formater.parse(dateStr)
+            formater.parse(dateStr)
         } catch (e: Exception) {
-            return null
+            null
         }
     }
 
@@ -39,10 +39,10 @@ object TimeUtils {
      */
     fun dateToString(date: Date, format: String = FORMAT_YMDHMS): String? {
         val formater = SimpleDateFormat(format, Locale.US)
-        try {
-            return formater.format(date)
+        return try {
+            formater.format(date)
         } catch (e: Exception) {
-            return null
+            null
         }
     }
 

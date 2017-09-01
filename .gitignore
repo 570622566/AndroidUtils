@@ -4,5 +4,9 @@
 /.idea
 .DS_Store
 /build
+/gradle
 /captures
 .externalNativeBuild
+/app/build
+/androidutilslib/build
+
